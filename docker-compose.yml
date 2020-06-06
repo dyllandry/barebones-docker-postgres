@@ -1,0 +1,12 @@
+version: "3.2"
+services:
+  postgres:
+    image: postgres
+    ports:
+      - 5432:5432
+    volumes:
+      - type: bind
+        source: ~/docker/volumes/postgres
+        target: /var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: "password"
